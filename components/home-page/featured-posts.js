@@ -1,22 +1,15 @@
 // import Image from 'next/image';
-// import classes from './hero.module.css';
+import PostsGrid from '../posts/posts-grid';
+import classes from './featured-posts.module.css';
 
-function FeaturedPost() {
-    return <div></div>
-    // return (
-    //     <section className={classes.hero}>
-    //         <div className={classes.image}>
-    //             <Image
-    //                 src="/images/site/max.png"
-    //                 alt="An image showing Max"
-    //                 width={300}
-    //                 height={300}
-    //             />
-    //         </div>
-    //         <h1>Hi, I'm Mustafa</h1>
-    //         <p>I blog about web development - especially frontend frameworks like Angular or React.</p>
-    //     </section>
-    // )
+function FeaturedPosts(props) {
+
+    return (
+        <section className={classes.latest}>
+            <h2>Featured Posts</h2>
+            <PostsGrid posts={props.posts} />
+        </section>
+    )
 }
 
-export default FeaturedPost;
+export default FeaturedPosts;
