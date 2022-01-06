@@ -1,3 +1,24 @@
+# SS of the Next Personal Blog
+## Homepage
+
+![view](public/images/github/n1.png)
+
+## All Posts
+
+![view](public/images/github/n2.png)
+
+## Contact
+
+![view](public/images/github/n3.png)
+
+## Single Page Post
+
+![view](public/images/github/n4.png)
+
+## Another Single Page Post
+
+![view](public/images/github/n5.png)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
