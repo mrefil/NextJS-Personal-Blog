@@ -1,9 +1,14 @@
+import { MongoClient } from 'mongodb';
 
-
-function handler(req, res) {
+async function handler(req, res) {
     if (req.method === 'POST') {
         const { email, name, message } = req.body;
-        if (!email || email.includes('@') || !name || name.trim() === '' || !message || message.trim() === '') {
+        if (!email ||
+            !name ||
+            name.trim() === '' ||
+            !message ||
+            message.trim() === ''
+        ) {
             res.status(422).json({
                 message: 'Invalid input.'
             });
@@ -15,8 +20,27 @@ function handler(req, res) {
             name,
             message
         };
+        //mongo db connection
+        let client;
+        try {
+        client = await MongoClient.connect('mongodb+srv://testUser:testUser123456@cluster0.agazq.mongodb.net/my-site?retryWrites=true&w=majority')
+        } catch (error) {
+            res.status(500).json({message: 'Could not connect to database.'})
+            return;
+        }
+        const db = client.db();
 
-        console.log(newMessage);
+        let result;
+        try {
+            result = await db.collection('messages').insertOne(newMessage);
+            newMessage.id = result.insertedId;
+        } catch (error) {
+            client.close();
+            res.status(500).json({message: 'Stroing message failed!'});
+            return;
+        }
+        client.close();
+
         res.status(201).json({
             message: 'Successfully stored message!',
             message: newMessage
