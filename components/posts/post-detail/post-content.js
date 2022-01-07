@@ -37,6 +37,7 @@ function PostContent(props) {
                             alt={image.alt}
                             width={600}
                             height={300}
+                            priority={true}
                         />
                     </div>
                 );

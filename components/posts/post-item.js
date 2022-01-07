@@ -22,6 +22,7 @@ function PostItem(props) {
                             width={300}
                             height={200}
                             layout="responsive"
+                            priority={true}
                         />
                     </div>
                     <div className={classes.content}>
