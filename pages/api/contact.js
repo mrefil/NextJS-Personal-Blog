@@ -14,13 +14,13 @@ async function handler(req, res) {
             });
             return;
         }
-        // Store it in a db
+
         const newMessage = {
             email,
             name,
             message
         };
-        //mongo db connection
+
         let client;
         const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clusterID}.agazq.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`;
         try {
