@@ -1,5 +1,3 @@
-// import { getSession } from "next-auth/client";
-// import { useEffect, useState } from "react";
 import ProfileForm from "./profile-form";
 import classes from "./user-profile.module.css";
 

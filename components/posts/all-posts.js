@@ -1,4 +1,3 @@
-
 import classes from './all-posts.module.css';
 import PostsGrid from './posts-grid';
 

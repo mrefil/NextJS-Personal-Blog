@@ -28,6 +28,3 @@ export function getStaticProps() {
 }
 
 export default HomePage;
-
-// 1) Hero Section      => Present Ourselves
-// 2) Featured Posts

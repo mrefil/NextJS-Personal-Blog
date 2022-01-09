@@ -4,7 +4,6 @@ import { verifyPassword } from "../../../lib/auth";
 import { connectToDatabase } from "../../../lib/db";
 
 export default NextAuth({
-  // check next auth configuration options
   session: {
     jwt: true
   },
