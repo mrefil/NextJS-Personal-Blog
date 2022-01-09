@@ -3,7 +3,8 @@
     width: 95%;
     max-width: 25rem;
     border-radius: 6px;
-    background-color: #38015c;
+    background-color: var(--color-grey-100);
+    /* background-color: #38015c; */
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     padding: 1rem;
     text-align: center;
@@ -11,7 +12,7 @@
   
   .auth h1 {
     text-align: center;
-    color: white;
+    color: var(--color-primary-500);
   }
   
   .control {
@@ -20,14 +21,14 @@
   
   .control label {
     display: block;
-    color: white;
+    color: var(--color-primary-500);
     font-weight: bold;
     margin-bottom: 0.5rem;
   }
   
   .control input {
     font: inherit;
-    background-color: #f1e1fc;
+    background-color: #ffffff;
     color: #38015c;
     border-radius: 4px;
     border: 1px solid white;

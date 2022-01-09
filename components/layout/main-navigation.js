@@ -18,6 +18,15 @@ function MainNavigation() {
                         </Link>
                     </li>
                     <li>
+                        <Link href="/contact">
+                            Contact
+                        </Link>
+                    </li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li>
                         <Link href='/auth'>Login</Link>
                     </li>
                     <li>
@@ -25,11 +34,6 @@ function MainNavigation() {
                     </li>
                     <li>
                         <button>Logout</button>
-                    </li>
-                    <li>
-                        <Link href="/contact">
-                            Contact
-                        </Link>
                     </li>
                 </ul>
             </nav>
